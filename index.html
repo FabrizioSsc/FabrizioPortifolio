@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Fabrizio Said</title>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header class="bg">
+        <nav>
+            <a href="#servicos" class="nav-links">Serviços</a>
+            <a href="#contatos" class="nav-links">Contato</a>
+        </nav>
+    </header>
+
+    <main id="principal">
+        <div id="content">
+            <!-- Conteúdo principal -->
+            <section id="text-section">
+                <h1 class="hello">Olá, eu me chamo</h1>
+                <h1 id="span">Fabrizio Said</h1> 
+                <h1>e sou estudante de Programação</h1>
+            </section>
+    
+            <div class="git"> 
+                <a href="https://github.com/FabrizioSsc">
+                    <img src="3073768.webp" alt="Foto de perfil" class="profile-img">
+                </a>
+            </div> 
+    
+            
+            <div id="skills-section">
+                <h2>Habilidades</h2>
+                <div id="languages-icons" style="background-color:rgb(72, 72, 72); padding: 5px; border-radius:10px;">
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" class="languages-icons-img">
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" class="languages-icons-img">
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" class="languages-icons-img">
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="nodejs" class="languages-icons-img">
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/ca28c779441053191ff11710fe24a9e6c23690d6/icons/tailwindcss/tailwindcss-original.svg" alt="tailwind" class="languages-icons-img">
+                </div>
+            </div>
+        </div>  
+    </main>
+
+
+
+
+    
+
+
+       
+
+        <!--Projetos--> 
+
+
+    </main>  
+    
+    <hr color="white">
+
+    <main class="projetos">
+        <h1 class="project">Projetos</h1> 
+    
+        <div class="carousel-container">
+            <div class="carousel" id="carousel1">
+                <div class="carousel-inner">
+                    <div class="carousel-item">
+                        <a href="https://movie-hub-api.netlify.app/"target="_blank">
+                            <img src="moviefoto.PNG" alt="Imagem 1" class="carousel-img">
+                        </a>
+     
+                       
+                    </div>
+                    <div class="carousel-item">
+                        <a href="https://github.com/FabrizioSsc/CLICKGAMES2"target="_blank">
+                            <img src="click.png" alt="Imagem 2" class="carousel-img">
+                        </a>
+                       
+                 
+                    </div>
+                    <div class="carousel-item">
+                        <a href="https://github.com/FabrizioSsc/Reprodutor-de-musica-com-formulario"target="_blank"> <img src="spotfly.png" alt="Imagem 3" class="carousel-img">  </a>
+                        
+                      
+                    </div>
+                    <div class="carousel-item">
+                        <a href="https://github.com/FabrizioSsc/Quadro-de-Tarefas-MyTask" target="_blank" rel="noopener noreferrer">
+                            <img src="qd.jpeg" alt="Imagem 4" class="carousel-img">
+                        </a>
+                       
+                      
+                    </div>
+                </div>
+                <button class="carousel-control prev" onclick="moveSlide(-1, 'carousel1')">&#10094;</button>
+                <button class="carousel-control next" onclick="moveSlide(1, 'carousel1')">&#10095;</button>
+            </div>
+        </div>
+    </main>
+    
+   
+    
+    <script>
+    function showSlide(carouselId, index) {
+        const carousel = document.getElementById(carouselId);
+        const slides = carousel.querySelector('.carousel-inner');
+        const items = slides.querySelectorAll('.carousel-item');
+        const totalSlides = items.length;
+    
+        // Garante que o índice esteja dentro dos limites
+        if (index >= totalSlides) index = 0;
+        if (index < 0) index = totalSlides - 1;
+    
+        // Atualiza a posição dos slides
+        slides.style.transform = `translateX(-${index * 100}%)`;
+        slides.dataset.currentIndex = index;
+    
+        // Remove a classe "active" de todos os itens e adiciona ao atual
+        items.forEach((item, i) => {
+            item.classList.toggle('active', i === index);
+        });
+    }
+    
+    function moveSlide(direction, carouselId) {
+        const carousel = document.getElementById(carouselId);
+        const slides = carousel.querySelector('.carousel-inner');
+        const items = slides.querySelectorAll('.carousel-item');
+        const totalSlides = items.length;
+    
+        let currentIndex = parseInt(slides.dataset.currentIndex) || 0;
+        const newIndex = (currentIndex + direction + totalSlides) % totalSlides;
+        showSlide(carouselId, newIndex);
+    }
+    
+
+    </script>
+    
+    
+
+</body>
+</html>

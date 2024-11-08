@@ -1,0 +1,276 @@
+/* style.css */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #041a1bc4;
+    color: #fff;
+}
+
+/* Navbar */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.8rem;
+    background-color: #4ade80;
+}
+
+nav {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links {
+    color: #fff;
+    text-decoration: none;
+    font-size: 2.5rem;
+}
+
+.nav-links:hover {
+    color: #70e3ea;
+    text-decoration: underline;
+    transition: 0.4s;
+}
+
+/* Conteúdo principal */
+#principal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5% 10%;
+    min-height: 80vh;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+#text-section {
+    text-align: center;
+}
+
+#text-section h1 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.profile-img {
+    width: 150px; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+    border-radius: 50%; /* Torna a imagem circular */
+    margin-bottom: 20px; /* Adiciona um espaço entre a foto e as habilidades */
+}
+
+#skills-section {
+    text-align: center;
+    margin-top: 20px;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+#languages-icons {
+    background-color: rgb(72, 72, 72);
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center; /* Centraliza os ícones horizontalmente */
+    gap: 15px; /* Espaçamento entre os ícones */
+}
+
+.languages-icons-img {
+    width: 50px; /* Ajuste conforme necessário */
+    height: auto;
+} 
+
+
+ img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px 5px rgba(212, 175, 55, 0.8);;
+
+}
+
+
+
+
+@media (min-width: 768px) {
+    #content {
+        flex-direction: row;
+        gap: 50px;
+    }
+}
+
+/* Texto */
+
+h1{
+    text-align: center;
+}
+
+#span{
+
+  color: #00D2DF;
+  width: 13ch;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 2s steps(13),blink 0.75s step-end infinite;
+
+
+ }
+
+@keyframes typing{
+  from{
+      width: 0;
+  }
+
+}
+
+@keyframes blink {
+50% { border-color: transparent; }
+}
+/* Imagem */
+.git img {
+    width: 200px;
+    height: auto;
+    border-radius: 50%;
+    transition: width 0.3s ease;
+}
+
+@media (min-width: 768px) {
+    .git img {
+        width: 250px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .git img {
+        width: 300px;
+    }
+}
+
+img{
+    cursor: pointer;
+    box-shadow: #70e3ea;
+}
+
+
+.git img {
+    width: 200px;
+    height: auto;
+    border-radius: 50%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 10px #00D2DF, 0 0 20px #00D2DF, 0 0 30px #00D2DF, 0 0 40px #00D2DF;
+}
+
+
+.git img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #00D2DF, 0 0 30px #00D2DF, 0 0 45px #00D2DF, 0 0 60px #00D2DF;
+}
+
+@media (min-width: 768px) {
+    .git img {
+        width: 250px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .git img {
+        width: 300px;
+    }
+}
+
+
+
+/*carrossel*/ 
+
+
+
+
+body {
+    background-color: #2e2e2e;
+    color: #ffffff; 
+    font-family: Arial, sans-serif; 
+}
+
+
+
+.carousel-container {
+    width: 90%; 
+    max-width: 800px; /* Limita a largura máxima */
+    margin: 20px auto;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%; 
+    margin: auto;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.carousel-item img {
+    width: 100%; /* Garante que a imagem ocupe toda a largura do contêiner */
+    height: auto; /* Permite que a altura seja ajustada automaticamente */
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Controles do Carrossel */
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 18px;
+}
+
+.carousel-control.prev {
+    left: 10px;
+}
+
+.carousel-control.next {
+    right: 10px;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    .carousel-container {
+        width: 100%;
+    }
+
+    .carousel-control {
+        padding: 8px;
+        font-size: 16px;
+    }
+}
+
+/*icones*/ 
+
