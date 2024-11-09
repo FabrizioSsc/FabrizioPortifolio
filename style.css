@@ -1,4 +1,4 @@
-/* style.css */
+
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
 
 * {
@@ -19,7 +19,11 @@ header {
     justify-content: center;
     align-items: center;
     padding: 0.8rem;
-    background-color: #4ade80;
+    background-color: #111111;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+   top: 0;
 }
 
 nav {
@@ -39,13 +43,16 @@ nav {
     transition: 0.4s;
 }
 
+
+
 /* Conteúdo principal */
-#principal {
+#home {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 5% 10%;
     min-height: 80vh;
+    margin-top: 70px;
 }
 
 #content {
@@ -56,19 +63,19 @@ nav {
 }
 
 #text-section {
-    text-align: center;
+    text-align: left;
 }
 
 #text-section h1 {
     font-size: 2rem;
     margin: 0;
 }
-
+/*imagens configurações*/
 .profile-img {
-    width: 150px; /* Ajuste o tamanho conforme necessário */
+    width: 150px; 
     height: auto;
-    border-radius: 50%; /* Torna a imagem circular */
-    margin-bottom: 20px; /* Adiciona um espaço entre a foto e as habilidades */
+    border-radius: 50%; 
+    margin-bottom: 20px; 
 }
 
 #skills-section {
@@ -86,22 +93,30 @@ h2 {
     padding: 10px;
     border-radius: 10px;
     display: flex;
-    justify-content: center; /* Centraliza os ícones horizontalmente */
-    gap: 15px; /* Espaçamento entre os ícones */
+    justify-content: center; 
+    gap: 15px; 
+   
 }
 
 .languages-icons-img {
-    width: 50px; /* Ajuste conforme necessário */
+    width: 50px; 
     height: auto;
 } 
 
 
- img:hover {
+.icons img:hover {
     transform: scale(1.1);
     box-shadow: 0 0 15px 5px rgba(212, 175, 55, 0.8);;
 
 }
+/*Rotação */ 
+.icons{
+    transition: transform 0.5s;
+}
 
+.icons :active{
+    transform: rotate(360deg);
+}
 
 
 
@@ -114,7 +129,7 @@ h2 {
 
 /* Texto */
 
-h1{
+.project{
     text-align: center;
 }
 
@@ -124,7 +139,7 @@ h1{
   width: 13ch;
   white-space: nowrap;
   overflow: hidden;
-  animation: typing 2s steps(13),blink 0.75s step-end infinite;
+  animation: typing 2s steps(13),blink 0.75s step-end ;
 
 
  }
@@ -171,13 +186,28 @@ img{
     border-radius: 50%;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 0 10px #00D2DF, 0 0 20px #00D2DF, 0 0 30px #00D2DF, 0 0 40px #00D2DF;
+    animation: float 3s ease-in-out infinite;
 }
 
 
 .git img:hover {
     transform: scale(1.1);
     box-shadow: 0 0 15px #00D2DF, 0 0 30px #00D2DF, 0 0 45px #00D2DF, 0 0 60px #00D2DF;
-}
+   
+}  
+
+
+
+@keyframes float{
+    0%, 100%{
+      transform: translateY(0);
+    }
+  
+    50%{
+      transform: translateY(-5px);
+  
+    }
+  }
 
 @media (min-width: 768px) {
     .git img {
@@ -208,7 +238,7 @@ body {
 
 .carousel-container {
     width: 90%; 
-    max-width: 800px; /* Limita a largura máxima */
+    max-width: 800px; 
     margin: 20px auto;
     text-align: center;
     margin-top: 100px;
@@ -232,8 +262,8 @@ body {
 }
 
 .carousel-item img {
-    width: 100%; /* Garante que a imagem ocupe toda a largura do contêiner */
-    height: auto; /* Permite que a altura seja ajustada automaticamente */
+    width: 100%; 
+    height: auto; 
     object-fit: cover;
     border-radius: 10px;
 }
@@ -272,5 +302,5 @@ body {
     }
 }
 
-/*icones*/ 
+
 
